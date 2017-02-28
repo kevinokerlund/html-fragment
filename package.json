@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevinokerlund/html-to-dom.git"
+    "url": "git+https://github.com/kevinokerlund/html-fragment.git"
   },
   "author": "Kevin Okerlund",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevinokerlund/html-to-dom/issues"
+    "url": "https://github.com/kevinokerlund/html-fragment/issues"
   },
-  "homepage": "https://github.com/kevinokerlund/html-to-dom#readme",
+  "homepage": "https://github.com/kevinokerlund/html-fragment#readme",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
