@@ -69,7 +69,7 @@ export default function (html) {
 	html = [wrap[1], html, wrap[2]].join('');
 
 	queryContainer = document.createElement('div');
-	queryContainer.insertAdjacentHTML('afterbegin', html);
+	queryContainer.insertAdjacentHTML('beforeend', html);
 	query = queryContainer.querySelector(wrap[0]);
 
 	while (query.firstChild) {
