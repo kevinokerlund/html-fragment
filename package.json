@@ -1,7 +1,7 @@
 {
   "name": "html-fragment",
   "version": "1.0.4",
-  "description": "Convert a string of HTML into a DocumentFragment.",
+  "description": "Convert a string of HTML into a DocumentFragment that preserves tags requiring a specific parent tag.",
   "main": "lib/html-fragment.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
