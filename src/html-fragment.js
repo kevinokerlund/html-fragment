@@ -9,6 +9,7 @@
  */
 const WRAP_MAP = {
 	thead: ['table', '<table>', '</table>'],
+	col: ['colgroup', '<table><colgroup>', '</colgroup></table>'],
 	tr: ['tbody', '<table><tbody>', '</tbody></table>'],
 	td: ['tr', '<table><tr>', '</tr></table>']
 };
