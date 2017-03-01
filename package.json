@@ -1,6 +1,6 @@
 {
   "name": "html-fragment",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert a string of HTML into a DocumentFragment.",
   "main": "lib/html-fragment.min.js",
   "scripts": {
