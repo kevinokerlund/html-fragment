@@ -31,6 +31,14 @@ const FIRST_TAG_REGEX = /^[\s]*<([a-z][^\/\s>]+)/i;
 
 
 /**
+ * Store whether or not the browser supports the template tag
+ *
+ * @type {boolean}
+ */
+const TEMPLATE_TAG_SUPPORT = 'content' in document.createElement('template');
+
+
+/**
  * If the current browser supports template elements, it returns a fragment from
  * a temporary template element.
  *
@@ -47,8 +55,7 @@ const FIRST_TAG_REGEX = /^[\s]*<([a-z][^\/\s>]+)/i;
 export default function (html) {
 	let fragment, queryContainer, query, wrap, tag, template;
 
-	// If the browser supports template tag
-	if ('content' in document.createElement('template')) {
+	if (TEMPLATE_TAG_SUPPORT) {
 		template = document.createElement('template');
 		template.innerHTML = html;
 		return template.content;
