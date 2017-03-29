@@ -35,4 +35,4 @@ var fragment = HtmlFragment('<div>Some crazy amount of HTML</div>');
 # Browser support
 | Chrome | Firefox | Safari | IE  | Edge |
 |:------:|:-------:|:------:|:---:|:----:|
-|    ✓   |    ✓    |   9+   | 11  |   ✓  |
+|    ✓   |    ✓    |    ✓   | 9+  |   ✓  |

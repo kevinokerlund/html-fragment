@@ -39,11 +39,19 @@ const TEMPLATE_TAG_SUPPORT = 'content' in document.createElement('template');
 
 
 /**
+ * Store whether or not the browser supports the Range API
+ *
+ * @type {boolean}
+ */
+const RANGE_SUPPORT = !!(document.createRange && 'createContextualFragment' in document.createRange());
+
+
+/**
  * If the current browser supports template elements, it returns a fragment from
  * a temporary template element.
  *
  * If the HTML does not have a tag at the beginning that needs to be wrapped,
- * and template is not supported, then return a fragment using the Range API.
+ * and template tags are not supported, return a fragment using the Range API.
  *
  * If the HTML has a tag at the beginning that needs to be wrapped, and the browser
  * does not support template, then wrap the HTML, and then insert the childNodes
@@ -65,12 +73,12 @@ export default function (html) {
 	tag = (FIRST_TAG_REGEX.exec(html) || ['', ''])[1];
 	wrap = WRAP_MAP[tag];
 
-	if (!wrap) {
+	if (!wrap && RANGE_SUPPORT) {
 		return document.createRange().createContextualFragment(html);
 	}
 
 
-	// If template tag is not supported and a special wrap is needed, wrap and return fragment
+	// If template tag, and Range API are not supported and a special wrap is needed, wrap and return fragment
 	fragment = document.createDocumentFragment();
 
 	html = [wrap[1], html, wrap[2]].join('');
