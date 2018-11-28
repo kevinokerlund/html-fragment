@@ -1,5 +1,11 @@
-/src/
+#Directories
+src/
 .idea/
 demo/
 node_modules/
+
+#Files
+.babelrc
+jest.config.js
 webpack.config.js
+yarn*
