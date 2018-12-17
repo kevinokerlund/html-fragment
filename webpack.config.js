@@ -10,5 +10,14 @@ module.exports = {
 		library: 'HtmlFragment',
 		libraryTarget: 'umd',
 		libraryExport: 'default',
-	}
+	},
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules)/,
+				use: 'babel-loader',
+			}
+		]
+	},
 };
